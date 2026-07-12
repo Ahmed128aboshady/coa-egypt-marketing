@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة التسويق وإطلاق الحملات الإعلانية | COA Egypt</title>
+    
+    <!-- Google Fonts: Cairo & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6.4.0 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coanavy: {
+                            DEFAULT: '#0A3356', // Brand Logo Navy
+                            dark: '#051D36',
+                            light: '#1F4E79',
+                            bg: '#F8FAFC'
+                        },
+                        coared: {
+                            DEFAULT: '#E31E24', // Brand Logo Red
+                            hover: '#C21419',
+                            light: '#FEE2E2'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #F8FAFC;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-b: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-coanavy selection:text-white pb-24">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-header shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpg" alt="COA Egypt Logo" class="h-10 w-auto">
+                <span class="border-r border-slate-200 pr-3 mr-1 text-sm font-bold text-slate-500">لوحة تخطيط الحملات التسويقية (Port 4040)</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="bg-coanavy/5 text-coanavy text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-bullseye text-coared"></i> خطة الربع الثالث 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 pt-32 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- SIDE NAVIGATION -->
+        <aside class="lg:col-span-3 space-y-3">
+            <div class="sticky top-32 bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm space-y-1">
+                <p class="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider px-3 mb-2">أقسام الخطة</p>
+                
+                <button onclick="showTab('tab-strategy')" id="btn-tab-strategy" class="w-full text-right flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold bg-coanavy text-white transition-all">
+                    <i class="fa-solid fa-chart-line text-base"></i>
+                    <span>1. الاستراتيجية العامة</span>
+                </button>
+                
+                <button onclick="showTab('tab-adsetup')" id="btn-tab-adsetup" class="w-full text-right flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold text-slate-500 hover:bg-slate-50 hover:text-coanavy transition-all">
+                    <i class="fa-solid fa-sliders text-base"></i>
+                    <span>2. إعداد الحملات (Ad Setup)</span>
+                </button>
+                
+                <button onclick="showTab('tab-campaigns')" id="btn-tab-campaigns" class="w-full text-right flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold text-slate-500 hover:bg-slate-50 hover:text-coanavy transition-all">
+                    <i class="fa-solid fa-graduation-cap text-base"></i>
+                    <span>3. حملات الكورسات الحالية</span>
+                </button>
+
+                <button onclick="showTab('tab-workflow')" id="btn-tab-workflow" class="w-full text-right flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold text-slate-500 hover:bg-slate-50 hover:text-coanavy transition-all">
+                    <i class="fa-solid fa-clipboard-list text-base"></i>
+                    <span>4. خطة العمل والتنفيذ 🚀</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT PANELS -->
+        <main class="lg:col-span-9 space-y-8">
+
+            <!-- PANEL 1: STRATEGY -->
+            <div id="panel-tab-strategy" class="space-y-8">
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm space-y-6">
+                    <h1 class="text-3xl font-black text-slate-900 leading-tight">خطة التسويق والنمو الشاملة لشركة COA Egypt</h1>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        هذه الخطة الاستراتيجية مقسمة لمساعدتكم كشريك فضي لـ **Odoo** ومكتب استشارات محاسبية وضريبية رائد، بالإضافة إلى ذراعكم التدريبي **COA Learning**.
+                    </p>
+                    
+                    <div class="h-[1px] bg-slate-100"></div>
+
+                    <!-- Video pillar -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-coared/5 text-coared flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-video"></i></span>
+                            <h2 class="text-xl font-bold text-slate-900">أولاً: استراتيجية فيديوهات الـ CEO (أ. إبراهيم رمضان)</h2>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            ظهور المدير التنفيذي (CEO) كوجه للشركة هو أقوى أداة لبناء الثقة في قطاع الشركات (B2B)، لأن المحاسبة وأنظمة الـ ERP تعتمد بالكامل على الأمان والموثوقية والخبرة الفعلية.
+                        </p>
+                        
+                        <div class="overflow-x-auto border border-slate-100 rounded-2xl mt-4">
+                            <table class="w-full text-right text-sm">
+                                <thead class="bg-slate-50 text-slate-700 font-bold border-b border-slate-100">
+                                    <tr>
+                                        <th class="p-4">الجزء</th>
+                                        <th class="p-4">المدة الزمنية</th>
+                                        <th class="p-4">الهدف والآلية</th>
+                                        <th class="p-4">مثال عملي</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 text-slate-600">
+                                    <tr>
+                                        <td class="p-4 font-bold text-slate-800">الجاذب (Hook)</td>
+                                        <td class="p-4 font-outfit">أول 3 ثوانٍ</td>
+                                        <td class="p-4">إثارة فضول المشاهد ومنعه من التمرير.</td>
+                                        <td class="p-4 text-coanavy font-bold">"ليه 70% من شركات المقاولات بتخسر فلوس وهي مش حاسة؟"</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-bold text-slate-800">المشكلة (Problem)</td>
+                                        <td class="p-4 font-outfit">من ثانية 4 إلى 15</td>
+                                        <td class="p-4">شرح المشكلة المحاسبية أو الإدارية التي يعاني منها العميل.</td>
+                                        <td class="p-4">"الخلط بين حسابات المشاريع ومصاريف الشركة العمومية بيعمل عجز سيولة مفاجئ."</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-bold text-slate-800">الحل (Solution)</td>
+                                        <td class="p-4 font-outfit">من ثانية 16 إلى 45</td>
+                                        <td class="p-4">تقديم الحل المهني وكيف يحل نظام Odoo هذه المشكلة.</td>
+                                        <td class="p-4">"في نظام أودو بنعمل مراكز تكلفة منفصلة لكل مشروع تتابع منها الأرباح أول بأول."</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-4 font-bold text-slate-800">الـ CTA</td>
+                                        <td class="p-4 font-outfit">آخر 10 ثوانٍ</td>
+                                        <td class="p-4">توجيه العميل للخطوة القادمة.</td>
+                                        <td class="p-4 text-coared font-bold">"احجز استشارتك المجانية لتنظيم حسابات شركتك من الرابط في البايو."</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="h-[1px] bg-slate-100"></div>
+
+                    <!-- B2B ERP -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-coanavy/5 text-coanavy flex items-center justify-center text-sm font-bold"><i class="fa-solid fa-briefcase"></i></span>
+                            <h2 class="text-xl font-bold text-slate-900">ثانياً: خطة الـ B2B وأصول الحملات (3 ريلز + 6 تصميمات)</h2>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            سنستخدم الأصول الإعلانية المحددة لـ B2B وهي (3 ريلز فيديو للمدير التنفيذي + 6 بوستات تصاميم) لتغطية الحملات بالكامل في الخليج ومصر وليبيا:
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                            <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2">
+                                <span class="bg-coared/10 text-coared text-[10px] font-bold px-2 py-0.5 rounded-full">3 Reels 🎥</span>
+                                <h4 class="font-bold text-slate-900 text-xs">توزيع الفيديوهات القصيرة (الـ CEO):</h4>
+                                <ul class="text-[11px] text-slate-500 list-disc list-inside space-y-1">
+                                    <li><strong>ريل 1:</strong> عرض مشكلة مقاولات وتداخل تكلفة المشاريع مع الإدارة.</li>
+                                    <li><strong>ريل 2:</strong> نصائح الفحص الضريبي وتفادي الغرامات.</li>
+                                    <li><strong>ريل 3:</strong> دراسة حالة (Case Study) لشركة تم ربطها بـ Odoo.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="p-5 bg-slate-50 border border-slate-100 rounded-2xl space-y-2 col-span-2">
+                                <span class="bg-coanavy/10 text-coanavy text-[10px] font-bold px-2 py-0.5 rounded-full">6 Designs 🖼️</span>
+                                <h4 class="font-bold text-slate-900 text-xs">توزيع المنشورات التصميمية الـ 6:</h4>
+                                <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-500 font-medium">
+                                    <div>1️⃣ مقارنة قبل وبعد استخدام Odoo في الحسابات.</div>
+                                    <div>2️⃣ عرض الاستشارة المجانية لتشخيص الدورة المستندية.</div>
+                                    <div>3️⃣ الفاتورة والإيصال الإلكتروني والربط مع الضرائب.</div>
+                                    <div>4️⃣ تحسين جرد المخازن وحساب التكلفة FIFO.</div>
+                                    <div>5️⃣ إدارة شؤون الموظفين والرواتب والامتثال.</div>
+                                    <div>6️⃣ كيف تصبح شريكاً مالياً ناجحاً لشركتك.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PANEL 2: AD SETUP -->
+            <div id="panel-tab-adsetup" class="hidden space-y-8">
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm space-y-6">
+                    <h1 class="text-3xl font-black text-slate-900 leading-tight">دليل إطلاق وإعداد الحملات الإعلانية خطوة بخطوة</h1>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        دليل عملي لكيفية ضبط الحسابات الإعلانية واستهداف الجمهور المناسب على فيسبوك ولينكدان للحصول على أعلى نسبة تسجيل.
+                    </p>
+                    
+                    <div class="h-[1px] bg-slate-100"></div>
+
+                    <!-- LinkedIn setup -->
+                    <div class="space-y-4">
+                        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2"><i class="fa-brands fa-linkedin text-blue-700"></i> 1. إطلاق حملة الـ B2B على LinkedIn</h2>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-green-500 mt-1"></i> <span><strong>الهدف (Objective):</strong> توليد عملاء محتملين (Lead Generation) باستخدام النماذج المدمجة لتقليل تكلفة التسجيل.</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-green-500 mt-1"></i> <span><strong>الاستهداف الجغرافي:</strong> استهداف الخليج (السعودية، الإمارات، قطر، الكويت) بميزانية مخصصة، ومصر وليبيا بميزانية أخرى مستقلة.</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-green-500 mt-1"></i> <span><strong>الوظائف المستهدفة:</strong> CEO, Founder, CFO, IT Manager, Operations Manager.</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-green-500 mt-1"></i> <span><strong>الميزانية التقديرية:</strong> 30$ - 50$ يومياً للخليج، و 15$ لمصر وليبيا.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="h-[1px] bg-slate-100"></div>
+
+                    <!-- Meta setup -->
+                    <div class="space-y-4">
+                        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2"><i class="fa-brands fa-facebook text-blue-600"></i> 2. إطلاق حملات Meta (فيسبوك وإنستغرام)</h2>
+                        
+                        <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl space-y-4">
+                            <h3 class="font-bold text-slate-950">أ. حملة الشركات والـ ERP (Meta B2B):</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                الهدف: الحصول على ليد للـ ERP. استهدف أصحاب الشركات الصغيرة (Small Business Owners) ومسؤولي صفحات الفيسبوك المهتمين بـ Odoo و Accounting.
+                            </p>
+                        </div>
+
+                        <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl space-y-4">
+                            <h3 class="font-bold text-slate-950">ب. حملة بيع الكورسات للأفراد (Meta B2C):</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                الهدف: رسائل واتساب أو ماسنجر مباشرة. استهدف الفئة العمرية (21 - 35 سنة) من خريجي كليات التجارة وإدارة الأعمال والمهتمين بالمحاسبة والضرائب والـ CPA/CMA.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- PANEL 3: CURRENT CAMPAIGNS -->
+            <div id="panel-tab-campaigns" class="hidden space-y-8">
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm space-y-6">
+                    <h1 class="text-3xl font-black text-slate-900 leading-tight">حملات إعلانات الكورسات والرواندات النشطة (COA Learning)</h1>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        البيانات والمناهج الرسمية المستخرجة من مستندات المعرفة لأكاديمية COA لتنسيق الحملات الإعلانية ومحاذاة المحتوى الإعلاني:
+                    </p>
+                    
+                    <div class="h-[1px] bg-slate-100"></div>
+
+                    <div class="space-y-6">
+                        
+                        <!-- Campaign 1: TAX Accounting -->
+                        <div class="border border-slate-100 rounded-2xl p-6 bg-slate-50/50 space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="bg-coared text-white text-xs font-bold px-3 py-1.5 rounded-full font-cairo">دفعة لايف وتفاعلية 🔴</span>
+                                <span class="text-xs text-slate-400 font-bold">بداية الرواند: الإثنين 27-7-2026</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">1. كورس الضرائب الشامل 2026 (TAX Accounting)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600 font-semibold pt-2">
+                                <div>👨‍🏫 <strong>المحاضر:</strong> أ. أحمد ماهر (خبرة عملية ضريبية كبيرة)</div>
+                                <div>🕗 <strong>المواعيد:</strong> كل إثنين وخميس – 7 مساءً بتوقيت مصر</div>
+                                <div>💻 <strong>نظام الدراسة:</strong> أونلاين (Zoom) / أوفلاين في قاعات مجهزة بالكامل</div>
+                                <div>🎥 <strong>ميزة إضافية:</strong> المحاضرات تسجل وتتاح للرجوع إليها في أي وقت</div>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl border border-slate-100 space-y-2">
+                                <h4 class="text-xs font-bold text-coanavy">📖 تفاصيل المنهج الدراسي:</h4>
+                                <ul class="text-[11px] text-slate-500 list-disc list-inside space-y-1">
+                                    <li><strong>ضريبة القيمة المضافة (6 محاضرات + ورشة):</strong> قانون 67 لسنة 2016، التصدير والاستيراد، التكليف العكسي، رد الضريبة، وإعداد الإقرار إلكترونياً.</li>
+                                    <li><strong>الخصم والإضافة (محاضرة + ورشة):</strong> الدفعات المقدمة وطرق رفع الإقرار الضريبي الإلكتروني.</li>
+                                    <li><strong>كسب العمل (محاضرة + ورشة):</strong> ضريبة الأجور والمرتبات والتأمينات والامتثال لقوانين العمل.</li>
+                                    <li><strong>إقرارات الدخل (4 محاضرات):</strong> الإهلاك الضريبي، الضرائب العقارية، ودخل الأشخاص الطبيعيين والاعتباريين.</li>
+                                </ul>
+                            </div>
+
+                            <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-slate-100 text-xs">
+                                <span class="font-bold text-slate-700">💰 الرسوم بعد الخصم:</span>
+                                <div class="space-x-3 text-slate-500 font-bold">
+                                    <span>أوفلاين: <strong class="text-coanavy font-outfit">2900 EGP</strong></span>
+                                    <span>أونلاين (لايف): <strong class="text-coanavy font-outfit">2000 EGP</strong></span>
+                                    <span>مسجل بالكامل: <strong class="text-coared font-outfit">1500 EGP</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Campaign 2: Odoo Implementation -->
+                        <div class="border border-slate-100 rounded-2xl p-6 bg-slate-50/50 space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="bg-coanavy text-white text-xs font-bold px-3 py-1.5 rounded-full font-cairo">دبلومة عملية مكثفة (28 سيشن) 🚀</span>
+                                <span class="text-xs text-slate-400 font-bold">بداية الرواند: 21-6 (دفعة جديدة مستمرة)</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">2. دبلومة تطبيق وهيكلة Odoo ERP V.19</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600 font-semibold pt-2">
+                                <div>👨‍🏫 <strong>المحاضر:</strong> م. إبراهيم رمضان (شريك معتمد لأودو ووكيل معتمد خبرة 7 سنوات)</div>
+                                <div>🏢 <strong>الموقع:</strong> الدقي (11 شارع جمال سالم متفرع من إيران، بجانب مترو البحوث)</div>
+                                <div>🎯 <strong>فرص توظيف:</strong> ترشيح وتعيين الطلاب المتميزين بعد انتهاء الدبلومة فوراً</div>
+                                <div>💵 <strong>طرق الدفع:</strong> إمكانية التقسيط (آخر دفعة تسدد بعد شهر من البداية)</div>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-xl border border-slate-100 space-y-2">
+                                <h4 class="text-xs font-bold text-coanavy">📖 تفاصيل المنهج والتطبيقات (28 سيشن + ورش):</h4>
+                                <ul class="text-[11px] text-slate-500 list-disc list-inside space-y-1">
+                                    <li><strong>الموديولات الأساسية:</strong> الحسابات (شجرة الحسابات والقيود والتقارير)، المستودعات والمخازن (FIFO/الجرد/الباركود)، المشتريات والمبيعات (الدورة المستندية الكاملة).</li>
+                                    <li><strong>الموديولات المتقدمة:</strong> التصنيع (MRP و BoM وحساب التكاليف)، المشاريع والمهام (Gantt و Timesheets)، نقاط البيع (POS retail/restaurant)، الموارد البشرية (Payroll ورواتب وحضور).</li>
+                                    <li><strong>حالات واقعية (Real Case Studies):</strong> تطبيق كامل على: مصنع، شركة استيراد وجملة، شركة خدمات واستشارات، وسلسلة تجزئة.</li>
+                                    <li><strong>مهارات سوق العمل الممتازة:</strong> تسعير مشاريع أودو، كيف تصبح شريك معتمد (Odoo Partner)، وخطوات التنفيذ من A to Z.</li>
+                                </ul>
+                            </div>
+
+                            <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-slate-100 text-xs">
+                                <span class="font-bold text-slate-700">💰 الرسوم بعد الخصم:</span>
+                                <div class="space-x-3 text-slate-500 font-bold">
+                                    <span>أوفلاين (شامل اللابتوبات): <strong class="text-coanavy font-outfit">6000 EGP</strong> (بدل 8000)</span>
+                                    <span>أونلاين (Zoom لايف): <strong class="text-coared font-outfit">5000 EGP</strong> (بدل 7000)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Campaign 3: Recorded accounting -->
+                        <div class="border border-slate-100 rounded-2xl p-6 bg-slate-50/50 space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="bg-coanavy text-white text-xs font-bold px-3 py-1.5 rounded-full font-cairo">كورس مسجل بالكامل 🎥</span>
+                                <span class="text-xs text-slate-400 font-bold">متاح للدراسة والبدء فورا</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">3. كورس المحاسبة المالية المسجل (Accounting Fundamentals)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                كورس تأسيسي مسجل بالكامل يشرح أساسيات الدورة الدفترية اليومية، وتصميم شجرة الحسابات وإثبات قيود اليومية ودفتر الأستاذ، وإعداد ميزان المراجعة والقوائم المالية (الميزانية وقائمة الدخل والتدفقات النقدية).
+                            </p>
+                            <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-slate-100 text-xs">
+                                <span class="font-bold text-slate-700">💰 الرسوم المخفضة للكورس المسجل:</span>
+                                <span class="text-coared font-black font-outfit text-sm">1500 EGP فقط</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 4: WORKFLOW & ACTION PLAN -->
+            <div id="panel-tab-workflow" class="hidden space-y-8">
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm space-y-6">
+                    <h1 class="text-3xl font-black text-slate-900 leading-tight">خطة العمل والتنفيذ التفصيلية خطوة بخطوة</h1>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        دليل وجدول زمني دقيق للخطوات التقنية، والتسويقية، وإدارة المبيعات لضمان إطلاق الحملات بنجاح.
+                    </p>
+                    
+                    <div class="h-[1px] bg-slate-100"></div>
+
+                    <!-- Step 1: Live Tax Cohort -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-coared"></span>
+                            <h3 class="text-lg font-bold text-slate-950">1. الجدول الزمني لرواند الضرائب (يبدأ 27 يوليو لايف)</h3>
+                        </div>
+                        <div class="relative border-l border-slate-100 pr-6 mr-3 space-y-6">
+                            <div class="relative">
+                                <span class="absolute -right-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-coared border-2 border-white shadow-sm"></span>
+                                <h4 class="text-sm font-bold text-slate-900">المرحلة الأولى: التحضير الفني (13 يوليو - 20 يوليو)</h4>
+                                <p class="text-xs text-slate-500 mt-1">تصوير فيديوهات الإعلانات للأستاذ إبراهيم رمضان، وتصميم كروت العرض وتجهيز صفحات الهبوط.</p>
+                            </div>
+                            <div class="relative">
+                                <span class="absolute -right-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-coanavy border-2 border-white shadow-sm"></span>
+                                <h4 class="text-sm font-bold text-slate-900">المرحلة الثانية: إعلانات التدفئة والوعي (21 يوليو - 24 يوليو)</h4>
+                                <p class="text-xs text-slate-500 mt-1">نشر مقاطع الفيديو القصيرة وتقديم كتيب أو قائمة فحص ضريبي (PDF مجاني) للطلاب والمهتمين لجمع أرقام هواتفهم.</p>
+                            </div>
+                            <div class="relative">
+                                <span class="absolute -right-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-coanavy border-2 border-white shadow-sm"></span>
+                                <h4 class="text-sm font-bold text-slate-900">المرحلة الثالثة: البيع المباشر والحجز (25 يوليو - 27 يوليو)</h4>
+                                <p class="text-xs text-slate-500 mt-1">إطلاق إعلانات الرسائل على فيسبوك وواتساب للتسجيل المباشر بعبارة "باقي مقاعد محدودة جداً والرواند يبدأ بعد 48 ساعة".</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-[1px] bg-slate-100"></div>
+
+                    <!-- Step 2: Recorded Odoo & Accounting -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-coanavy"></span>
+                            <h3 class="text-lg font-bold text-slate-950">2. خطوات إطلاق الكورسات المسجلة (أودو ومحاسبة مالية)</h3>
+                        </div>
+                        <ul class="space-y-4 text-sm text-slate-600">
+                            <li class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1">
+                                <h4 class="font-bold text-slate-900">الخطوة الأولى: تجهيز الفيديوهات والمنصة</h4>
+                                <p class="text-xs text-slate-500">التأكد من رفع الفيديوهات كاملة على المنصة التعليمية وترتيب المناهج وملفات الـ PDF المساعدة لكل قسم.</p>
+                            </li>
+                            <li class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1">
+                                <h4 class="font-bold text-slate-900">الخطوة الثانية: إطلاق إعلانات Meta الدائمة</h4>
+                                <p class="text-xs text-slate-500">إطلاق حملات الرسائل المستهدفة بشكل مستمر (مصر، الخليج) باستخدام ميزانية يومية منخفضة ولقطات سريعة توضح طريقة الشرح والربط بالجانب العملي.</p>
+                            </li>
+                            <li class="p-4 bg-slate-50 border border-slate-100 rounded-xl space-y-1">
+                                <h4 class="font-bold text-slate-900">الخطوة الثالثة: إغلاق المبيعات وتقديم عينات مجانية</h4>
+                                <p class="text-xs text-slate-500">إرسال رابط فيديو كامل أو محاضرة مجانية كعينة عند محادثة الطلاب على الواتساب لرفع معدل الشراء الفوري (Conversion Rate).</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="h-[1px] bg-slate-100"></div>
+
+                    <!-- CRM & Technical -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+                            <h3 class="text-lg font-bold text-slate-950">3. خطوات العمل الفنية والتنظيمية للمبيعات</h3>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-600 font-semibold list-disc list-inside pr-4">
+                            <li>تفعيل تطبيق WhatsApp Business وتجهيز ردود سريعة للرد التلقائي على العملاء.</li>
+                            <li>تخصيص روابط مباشرة لإرسال المنهج وتسهيل عمليات الدفع الفوري (فودافون كاش / تحويلات بنكية).</li>
+                            <li>تركيب وتفعيل Meta Pixel على صفحات الهبوط لتجميع الجماهير المهتمة لإعادة استهدافهم لاحقاً بحملات الخصومات.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            const tabs = ['tab-strategy', 'tab-adsetup', 'tab-campaigns', 'tab-workflow'];
+            
+            tabs.forEach(tab => {
+                const panel = document.getElementById(`panel-${tab}`);
+                const btn = document.getElementById(`btn-${tab}`);
+                
+                if (tab === tabId) {
+                    panel.classList.remove('hidden');
+                    btn.className = "w-full text-right flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold bg-coanavy text-white transition-all shadow-md";
+                } else {
+                    panel.classList.add('hidden');
+                    btn.className = "w-full text-right flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold text-slate-500 hover:bg-slate-50 hover:text-coanavy transition-all";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

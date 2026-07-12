@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شريك Odoo ERP والتدقيق المالي | COA Egypt</title>
+    
+    <!-- Google Fonts: Cairo & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6.4.0 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coanavy: {
+                            DEFAULT: '#0A3356', // Brand Logo Navy
+                            dark: '#051D36',
+                            light: '#1F4E79',
+                            bg: '#F8FAFC'
+                        },
+                        coared: {
+                            DEFAULT: '#E31E24', // Brand Logo Red
+                            hover: '#C21419',
+                            light: '#FEE2E2'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #FFFFFF;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-b: 1px solid rgba(241, 245, 249, 0.8);
+        }
+        .hover-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+            border-color: rgba(10, 51, 86, 0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-700 overflow-x-hidden antialiased selection:bg-coanavy selection:text-white">
+
+    <!-- FLOATING LIGHT NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-header shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpg" alt="COA Egypt Logo" class="h-12 w-auto md:h-14">
+            </div>
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-bold text-slate-600">
+                <a href="#solutions" class="hover:text-coanavy transition-colors">حلولنا</a>
+                <a href="#odoo-demo" class="hover:text-coanavy transition-colors">منصة Odoo</a>
+                <a href="#roi-calculator" class="hover:text-coanavy transition-colors">حاسبة الاستثمار</a>
+                <a href="#about" class="hover:text-coanavy transition-colors">عن الشركة</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/201013907174" target="_blank" class="text-slate-500 hover:text-green-500 text-xl transition-colors hidden sm:block"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#consultation" class="bg-coanavy hover:bg-coanavy-dark text-white text-xs font-black px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md">احجز استشارتك</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-44 pb-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+        <!-- Aesthetic background meshes -->
+        <div class="absolute w-[600px] h-[600px] bg-blue-50 rounded-full blur-[120px] top-10 right-10 pointer-events-none opacity-50"></div>
+        <div class="absolute w-[400px] h-[400px] bg-red-50 rounded-full blur-[100px] bottom-10 left-10 pointer-events-none opacity-40"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+            
+            <div class="lg:col-span-6 space-y-8 text-right hero-text">
+                <span class="inline-flex items-center gap-2 bg-coanavy/5 border border-coanavy/10 text-coanavy text-xs font-bold px-4 py-2 rounded-full">
+                    <i class="fa-solid fa-circle-check text-coared"></i> شريك فضي معتمد من Odoo ERP
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+                    قم برقمة حساباتك ودورتك المستندية مع <span class="text-coanavy">COA Egypt</span>
+                </h1>
+                <p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-xl">
+                    نحن لا نبيع برامج محاسبية؛ بل نقوم بتهيئة وتطوير كامل للهيكل المالي والإداري لشركتك لربط كافة الفروع والمخازن والضرائب تحت نظام Odoo متكامل ومخصص.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-start">
+                    <a href="#consultation" class="bg-coanavy hover:bg-coanavy-dark text-white font-bold text-center px-8 py-4.5 rounded-xl shadow-lg shadow-coanavy/20 transition-all duration-300 flex items-center justify-center gap-3">
+                        اطلب استشارتك المجانية <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Odoo Dashboard Demo (Light Theme) -->
+            <div class="lg:col-span-6 relative hero-dashboard">
+                <div class="absolute -inset-1.5 bg-slate-100 rounded-3xl blur opacity-30"></div>
+                <div class="relative bg-white border border-slate-200/80 rounded-2xl p-6 shadow-xl space-y-6">
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-4">
+                        <div class="flex gap-1.5">
+                            <span class="w-3 h-3 rounded-full bg-slate-200"></span>
+                            <span class="w-3 h-3 rounded-full bg-slate-200"></span>
+                            <span class="w-3 h-3 rounded-full bg-slate-200"></span>
+                        </div>
+                        <div class="flex gap-2">
+                            <button id="tab-sales" class="bg-coanavy/10 text-coanavy text-xs font-bold px-3 py-1.5 rounded-lg transition-all" onclick="switchTab('sales')">المبيعات</button>
+                            <button id="tab-inv" class="bg-slate-50 text-slate-500 hover:text-coanavy text-xs font-bold px-3 py-1.5 rounded-lg transition-all" onclick="switchTab('inv')">المستودعات</button>
+                            <button id="tab-tax" class="bg-slate-50 text-slate-500 hover:text-coanavy text-xs font-bold px-3 py-1.5 rounded-lg transition-all" onclick="switchTab('tax')">الضرائب</button>
+                        </div>
+                    </div>
+                    
+                    <div id="demo-pane" class="min-h-[220px] flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <h4 class="text-xs text-slate-400 font-bold mb-1">المبيعات الشهرية لـ Odoo</h4>
+                                    <p class="text-3xl font-black text-slate-900 font-outfit">$48,250.00</p>
+                                </div>
+                                <span class="bg-green-500/10 text-green-600 text-xs font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-arrow-trend-up"></i> +24%</span>
+                            </div>
+                            <div class="h-28 flex items-end gap-3 pt-4">
+                                <div class="w-full bg-slate-100 rounded-t-lg transition-all duration-500" style="height: 40%"></div>
+                                <div class="w-full bg-slate-100 rounded-t-lg transition-all duration-500" style="height: 60%"></div>
+                                <div class="w-full bg-slate-100 rounded-t-lg transition-all duration-500" style="height: 50%"></div>
+                                <div class="w-full bg-coared rounded-t-lg transition-all duration-500" style="height: 85%"></div>
+                                <div class="w-full bg-coanavy rounded-t-lg transition-all duration-500" style="height: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SOLUTIONS -->
+    <section id="solutions" class="py-32 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center space-y-4 mb-24 section-header">
+                <span class="text-coared text-sm font-black uppercase tracking-widest">خدماتنا المتميزة</span>
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900">حلول محاسبية متكاملة وتطوير ERP</h2>
+                <div class="w-16 h-1 bg-coared mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 hover-card transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 bg-coanavy/5 text-coanavy border border-coanavy/10 rounded-xl flex items-center justify-center text-2xl mb-8">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">برمجة وتخصيص Odoo ERP</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">نعيد كتابة وبرمجة موديولات أودو لتتوافق تماماً مع نشاط شركتك الإداري والمخزني، وتصدير التقارير المالية المخصصة.</p>
+                    </div>
+                    <ul class="space-y-3 text-xs font-semibold text-slate-500 border-t border-slate-100 pt-6 mt-6">
+                        <li><i class="fa-solid fa-check text-coared mr-1"></i> ربط الفاتورة والإيصال الإلكتروني</li>
+                        <li><i class="fa-solid fa-check text-coared mr-1"></i> تهيئة موديولات الحسابات والمخازن</li>
+                        <li><i class="fa-solid fa-check text-coared mr-1"></i> ترحيل البيانات وتدريب فريق العمل</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 hover-card transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 bg-coared/5 text-coared border border-coared/10 rounded-xl flex items-center justify-center text-2xl mb-8">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">الاستشارات والامتثال الضريبي</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">إعداد وتقديم إقرارات القيمة المضافة والأرباح التجارية، والتمثيل والدفاع في حالات الفحص الضريبي.</p>
+                    </div>
+                    <ul class="space-y-3 text-xs font-semibold text-slate-500 border-t border-slate-100 pt-6 mt-6">
+                        <li><i class="fa-solid fa-check text-coanavy mr-1"></i> تقديم الإقرارات الضريبية بانتظام</li>
+                        <li><i class="fa-solid fa-check text-coanavy mr-1"></i> تخطيط ضريبي وقانوني متكامل</li>
+                        <li><i class="fa-solid fa-check text-coanavy mr-1"></i> إنجاز الفحوصات والتسويات الضريبية</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 hover-card transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="w-14 h-14 bg-coanavy/5 text-coanavy border border-coanavy/10 rounded-xl flex items-center justify-center text-2xl mb-8">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">التدقيق المالي والمراجعة</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">فحص شامل ومستقل للحسابات وإصدار ميزانيات وتقارير مالية معتمدة للجهات الحكومية والتمويلية.</p>
+                    </div>
+                    <ul class="space-y-3 text-xs font-semibold text-slate-500 border-t border-slate-100 pt-6 mt-6">
+                        <li><i class="fa-solid fa-check text-coared mr-1"></i> مراجعة وفحص دوري لدفاتر الحسابات</li>
+                        <li><i class="fa-solid fa-check text-coared mr-1"></i> إعداد الميزانيات العمومية المعتمدة</li>
+                        <li><i class="fa-solid fa-check text-coared mr-1"></i> دراسات الجدوى والتدفقات النقدية</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE ROI CALCULATOR -->
+    <section id="roi-calculator" class="py-32 bg-white relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center space-y-4 mb-20">
+                <span class="text-coanavy text-sm font-black uppercase tracking-widest">ميزانية النظام والوفر</span>
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900">حاسبة تقدير الحجم والوفر الأسبوعي لـ Odoo</h2>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200/60 rounded-3xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-12 shadow-sm">
+                
+                <div class="md:col-span-7 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">اختر موديولات النظام التي ترغب بضمها لشركتك:</h3>
+                    
+                    <div class="space-y-4">
+                        
+                        <label class="flex justify-between items-center bg-white border border-slate-100 hover:border-coanavy/30 rounded-xl p-4 cursor-pointer transition-all shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" checked id="calc-acc" class="w-5 h-5 accent-coanavy" onchange="calculateROI()">
+                                <span class="font-bold text-slate-800">المحاسبة والقيود والتقارير المالية</span>
+                            </div>
+                            <span class="text-xs text-slate-400 font-bold">أساسي</span>
+                        </label>
+
+                        <label class="flex justify-between items-center bg-white border border-slate-100 hover:border-coanavy/30 rounded-xl p-4 cursor-pointer transition-all shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" id="calc-inv" class="w-5 h-5 accent-coanavy" onchange="calculateROI()">
+                                <span class="font-bold text-slate-800">إدارة المستودعات والجرد والمخازن</span>
+                            </div>
+                            <span class="text-xs text-coared font-bold">+ ربط الباركود</span>
+                        </label>
+
+                        <label class="flex justify-between items-center bg-white border border-slate-100 hover:border-coanavy/30 rounded-xl p-4 cursor-pointer transition-all shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" id="calc-sales" class="w-5 h-5 accent-coanavy" onchange="calculateROI()">
+                                <span class="font-bold text-slate-800">إدارة المبيعات والعملاء (CRM) الكاشير</span>
+                            </div>
+                            <span class="text-xs text-slate-400 font-bold">ربط الكاشير</span>
+                        </label>
+
+                        <label class="flex justify-between items-center bg-white border border-slate-100 hover:border-coanavy/30 rounded-xl p-4 cursor-pointer transition-all shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" id="calc-hr" class="w-5 h-5 accent-coanavy" onchange="calculateROI()">
+                                <span class="font-bold text-slate-800">شؤون الموظفين ورواتب الموظفين (HR)</span>
+                            </div>
+                            <span class="text-xs text-slate-400 font-bold">ربط البصمة</span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 bg-white border border-slate-200/80 rounded-2xl p-8 flex flex-col justify-between text-center shadow-md">
+                    <div class="space-y-6">
+                        <h4 class="text-xs text-slate-400 font-bold uppercase tracking-widest">الوقت التقديري الموفر أسبوعياً</h4>
+                        <div class="space-y-2">
+                            <span class="text-5xl font-black text-coanavy font-outfit" id="val-hours">10</span>
+                            <p class="text-xs text-slate-500">ساعة عمل يتم توفيرها أسبوعياً</p>
+                        </div>
+                        <div class="w-full h-[1px] bg-slate-100"></div>
+                        <div class="space-y-2">
+                            <span class="text-sm font-bold text-slate-800">مدة التهيئة والبرمجة التقديرية</span>
+                            <p class="text-2xl font-black text-coared" id="val-weeks">3 أسابيع</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#consultation" class="w-full bg-coanavy hover:bg-coanavy-dark text-white text-xs font-black py-4 rounded-xl mt-8 transition-all shadow-md shadow-coanavy/10">اطلب عرض أسعار تفصيلي لشركتك</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD FORM -->
+    <section id="consultation" class="py-32 bg-slate-50 relative border-t border-slate-200/50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
+                
+                <!-- Language Switcher Tab -->
+                <div class="flex justify-end gap-2 mb-8">
+                    <button type="button" id="form-lang-en" onclick="setFormLang('en')" class="text-xs font-bold px-3 py-1.5 rounded-lg bg-coanavy text-white transition-all shadow-sm">English</button>
+                    <button type="button" id="form-lang-ar" onclick="setFormLang('ar')" class="text-xs font-bold px-3 py-1.5 rounded-lg bg-slate-50 text-slate-500 hover:text-coanavy transition-all">عربي مصري</button>
+                </div>
+
+                <div class="text-center space-y-4 mb-12">
+                    <h2 id="form-title" class="text-3xl md:text-4xl font-black text-slate-900">Get Your Free Business Consultation</h2>
+                    <p id="form-subtitle" class="text-slate-500 text-sm">Enter your company details below, and one of our expert consultants will contact you within 24 hours.</p>
+                </div>
+
+                <form id="leadForm" class="space-y-6" dir="ltr">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label id="lbl-name" class="text-xs font-bold text-slate-500 block">Full Name *</label>
+                            <input type="text" id="b2bName" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 text-slate-800 focus:outline-none focus:border-coanavy focus:ring-4 focus:ring-coanavy/5 transition-all text-left" placeholder="e.g. John Doe">
+                        </div>
+                        <div class="space-y-2">
+                            <label id="lbl-company" class="text-xs font-bold text-slate-500 block">Company Name *</label>
+                            <input type="text" id="b2bCompany" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 text-slate-800 focus:outline-none focus:border-coanavy focus:ring-4 focus:ring-coanavy/5 transition-all text-left" placeholder="e.g. Acme Corp">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label id="lbl-phone" class="text-xs font-bold text-slate-500 block">Phone / WhatsApp Number *</label>
+                            <input type="tel" id="b2bPhone" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 text-slate-800 focus:outline-none focus:border-coanavy focus:ring-4 focus:ring-coanavy/5 transition-all text-left font-outfit" placeholder="e.g. +2010xxxxxxxx">
+                        </div>
+                        <div class="space-y-2">
+                            <label id="lbl-email" class="text-xs font-bold text-slate-500 block">Work Email *</label>
+                            <input type="email" id="b2bEmail" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 text-slate-800 focus:outline-none focus:border-coanavy focus:ring-4 focus:ring-coanavy/5 transition-all text-left font-outfit" placeholder="e.g. name@company.com">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label id="lbl-service" class="text-xs font-bold text-slate-500 block">Desired Service *</label>
+                        <select id="b2bService" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 text-slate-800 focus:outline-none focus:border-coanavy focus:ring-4 focus:ring-coanavy/5 transition-all text-left">
+                            <option value="" disabled selected id="opt-service-placeholder">Select the primary service you need...</option>
+                            <option value="odoo" id="opt-service-odoo">Odoo ERP Implementation & Customization</option>
+                            <option value="taxes" id="opt-service-taxes">Tax Compliance & Advisory</option>
+                            <option value="accounting" id="opt-service-accounting">Financial Audit & Accounting Services</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="btn-submit" class="w-full bg-coanavy hover:bg-coanavy-dark text-white font-bold py-4 rounded-xl shadow-lg shadow-coanavy/10 transition-all duration-300">Submit Request & Book Consultation</button>
+                </form>
+
+                <div id="formSuccess" class="hidden text-center space-y-6 py-12">
+                    <div class="w-20 h-20 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto border border-green-500/30">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 id="success-title" class="text-2xl font-bold text-slate-900">Thank you! Your request was received.</h3>
+                    <p id="success-msg" class="text-slate-500 max-w-md mx-auto text-sm">One of our financial or ERP experts will contact you on WhatsApp shortly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-100 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <img src="logo.jpg" alt="COA Egypt Logo" class="h-10 w-auto">
+            <p>© 2026 جميع الحقوق محفوظة لشركة COA Egypt للاستشارات المالية والـ ERP.</p>
+            <div class="flex gap-4">
+                <a href="https://wa.me/201013907174" target="_blank" class="w-10 h-10 rounded-full bg-slate-50 hover:bg-coanavy hover:text-white transition-all flex items-center justify-center text-slate-500"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/COA.Egypt/" target="_blank" class="w-10 h-10 rounded-full bg-slate-50 hover:bg-coanavy hover:text-white transition-all flex items-center justify-center text-slate-500"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // GSAP entrance animations
+        gsap.from(".hero-text", { duration: 1.2, x: 80, opacity: 0, ease: "power3.out" });
+        gsap.from(".hero-dashboard", { duration: 1.4, x: -80, opacity: 0, ease: "power3.out", delay: 0.2 });
+
+        function switchTab(tab) {
+            const tabs = ['sales', 'inv', 'tax'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                if(t === tab) {
+                    btn.className = "bg-coanavy/10 text-coanavy text-xs font-bold px-3 py-1.5 rounded-lg transition-all";
+                } else {
+                    btn.className = "bg-slate-50 text-slate-500 hover:text-coanavy text-xs font-bold px-3 py-1.5 rounded-lg transition-all";
+                }
+            });
+
+            const pane = document.getElementById('demo-pane');
+            if(tab === 'sales') {
+                pane.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-bold mb-1">المبيعات الشهرية لـ Odoo</h4>
+                                <p class="text-3xl font-black text-slate-900 font-outfit">$48,250.00</p>
+                            </div>
+                            <span class="bg-green-500/10 text-green-600 text-xs font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-arrow-trend-up"></i> +24%</span>
+                        </div>
+                        <div class="h-28 flex items-end gap-3 pt-4">
+                            <div class="w-full bg-slate-100 rounded-t-lg" style="height: 40%"></div>
+                            <div class="w-full bg-slate-100 rounded-t-lg" style="height: 60%"></div>
+                            <div class="w-full bg-slate-100 rounded-t-lg" style="height: 50%"></div>
+                            <div class="w-full bg-coared rounded-t-lg" style="height: 85%"></div>
+                            <div class="w-full bg-coanavy rounded-t-lg" style="height: 95%"></div>
+                        </div>
+                    </div>
+                `;
+            } else if(tab === 'inv') {
+                pane.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-bold mb-1">كفاءة إدارة المستودعات</h4>
+                                <p class="text-3xl font-black text-slate-900 font-outfit">99.2% دقة</p>
+                            </div>
+                            <span class="bg-blue-500/10 text-blue-600 text-xs font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-circle-check"></i> جرد دقيق</span>
+                        </div>
+                        <div class="space-y-3 pt-4">
+                            <div class="flex justify-between text-xs text-slate-500"><span>مستودع القاهرة الرئيسي</span><span>98%</span></div>
+                            <div class="w-full bg-slate-100 rounded-full h-2.5"><div class="bg-coanavy h-2.5 rounded-full" style="width: 98%"></div></div>
+                            <div class="flex justify-between text-xs text-slate-500"><span>مستودع الرياض</span><span>90%</span></div>
+                            <div class="w-full bg-slate-100 rounded-full h-2.5"><div class="bg-coared h-2.5 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                    </div>
+                `;
+            } else if(tab === 'tax') {
+                pane.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-bold mb-1">نسبة الالتزام والامتثال الضريبي</h4>
+                                <p class="text-3xl font-black text-slate-900 font-outfit">100% مطابقة</p>
+                            </div>
+                            <span class="bg-green-500/10 text-green-600 text-xs font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-lock"></i> نظام آمن</span>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed pt-2">نظام Odoo مكامل ومحدث مع الفاتورة الإلكترونية لرفع التقارير الضريبية تلقائياً دون أي مخاطرة أو تأخير.</p>
+                        <div class="flex gap-4 pt-2 text-xs font-bold text-slate-800">
+                            <span><i class="fa-solid fa-check text-coared"></i> ربط الفاتورة الإلكترونية</span>
+                            <span><i class="fa-solid fa-check text-coared"></i> ضريبة القيمة المضافة</span>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function calculateROI() {
+            const acc = document.getElementById('calc-acc').checked;
+            const inv = document.getElementById('calc-inv').checked;
+            const sales = document.getElementById('calc-sales').checked;
+            const hr = document.getElementById('calc-hr').checked;
+
+            let hours = 0;
+            let weeks = 0;
+
+            if(acc) { hours += 10; weeks += 3; }
+            if(inv) { hours += 8; weeks += 2; }
+            if(sales) { hours += 6; weeks += 1; }
+            if(hr) { hours += 5; weeks += 1; }
+
+            document.getElementById('val-hours').textContent = hours;
+            document.getElementById('val-weeks').textContent = weeks + ' أسابيع';
+        }
+
+        // Lead Form Language Switcher Logic
+        function setFormLang(lang) {
+            const isEn = lang === 'en';
+            
+            const btnEn = document.getElementById('form-lang-en');
+            const btnAr = document.getElementById('form-lang-ar');
+            
+            if (isEn) {
+                btnEn.className = "text-xs font-bold px-3 py-1.5 rounded-lg bg-coanavy text-white transition-all shadow-sm";
+                btnAr.className = "text-xs font-bold px-3 py-1.5 rounded-lg bg-slate-50 text-slate-500 hover:text-coanavy transition-all";
+            } else {
+                btnAr.className = "text-xs font-bold px-3 py-1.5 rounded-lg bg-coanavy text-white transition-all shadow-sm";
+                btnEn.className = "text-xs font-bold px-3 py-1.5 rounded-lg bg-slate-50 text-slate-500 hover:text-coanavy transition-all";
+            }
+
+            // Text content translations (with Egyptian Arabic for 'ar')
+            document.getElementById('form-title').textContent = isEn ? "Get Your Free Business Consultation" : "اطلب استشارتك المجانية لشركتك دلوقتي";
+            document.getElementById('form-subtitle').textContent = isEn ? "Enter your company details below, and one of our expert consultants will contact you within 24 hours." : "اكتب تفاصيل شركتك ومستشارينا هيكلموك في خلال 24 ساعة بالكتير عشان يشخصوا دورتك المستندية مجاناً.";
+            
+            document.getElementById('lbl-name').textContent = isEn ? "Full Name *" : "اسمك الكريم بالكامل *";
+            document.getElementById('b2bName').placeholder = isEn ? "e.g. John Doe" : "مثال: أ. أحمد محمد";
+            
+            document.getElementById('lbl-company').textContent = isEn ? "Company Name *" : "اسم شركتك أو مشروعك *";
+            document.getElementById('b2bCompany').placeholder = isEn ? "e.g. Acme Corp" : "مثال: شركة المقاولات الحديثة";
+            
+            document.getElementById('lbl-phone').textContent = isEn ? "Phone / WhatsApp Number *" : "رقم تليفونك (الواتساب عشان نكلمك عليه) *";
+            document.getElementById('b2bPhone').placeholder = isEn ? "e.g. +2010xxxxxxxx" : "مثال: 010xxxxxxxx";
+            
+            document.getElementById('lbl-email').textContent = isEn ? "Work Email *" : "إيميل الشغل *";
+            document.getElementById('b2bEmail').placeholder = isEn ? "e.g. name@company.com" : "مثال: info@company.com";
+            
+            document.getElementById('lbl-service').textContent = isEn ? "Desired Service *" : "الخدمة اللي بتدور عليها؟ *";
+            document.getElementById('opt-service-placeholder').textContent = isEn ? "Select the primary service you need..." : "اختر الخدمة الرئيسية اللي محتاجها...";
+            document.getElementById('opt-service-odoo').textContent = isEn ? "Odoo ERP Implementation & Customization" : "برمجة وتطبيق موديولات Odoo ERP";
+            document.getElementById('opt-service-taxes').textContent = isEn ? "Tax Compliance & Advisory" : "الاستشارات والامتثال الضريبي";
+            document.getElementById('opt-service-accounting').textContent = isEn ? "Financial Audit & Accounting Services" : "المراجعة والتدقيق والتحليل المالي";
+            
+            document.getElementById('btn-submit').textContent = isEn ? "Submit Request & Book Consultation" : "ابعت الطلب وسيب الباقي علينا";
+            
+            document.getElementById('success-title').textContent = isEn ? "Thank you! Your request was received." : "طلبك وصل لينا بنجاح!";
+            document.getElementById('success-msg').textContent = isEn ? "One of our financial or ERP experts will contact you on WhatsApp shortly." : "شكراً لثقتك في COA Egypt. مستشار مالي أو تقني هيكلمك على الواتساب دلوقتي لتحديد الموعد.";
+
+            // Layout alignment toggle
+            const form = document.getElementById('leadForm');
+            const inputs = form.querySelectorAll('input, select');
+            const labels = form.querySelectorAll('label');
+            
+            if (isEn) {
+                form.setAttribute('dir', 'ltr');
+                inputs.forEach(el => {
+                    el.classList.remove('text-right');
+                    el.classList.add('text-left');
+                });
+                labels.forEach(el => {
+                    el.classList.remove('text-right');
+                    el.classList.add('text-left');
+                });
+            } else {
+                form.setAttribute('dir', 'rtl');
+                inputs.forEach(el => {
+                    el.classList.remove('text-left');
+                    el.classList.add('text-right');
+                });
+                labels.forEach(el => {
+                    el.classList.remove('text-left');
+                    el.classList.add('text-right');
+                });
+            }
+        }
+
+        // Initialize Form Language to English (Default)
+        setFormLang('en');
+
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('leadForm').classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

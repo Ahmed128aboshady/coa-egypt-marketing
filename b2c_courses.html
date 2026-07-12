@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية التدريب المحاسبي والـ ERP | COA Learning</title>
+    
+    <!-- Google Fonts: Cairo & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6.4.0 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coanavy: {
+                            DEFAULT: '#0A3356', // Brand Logo Navy
+                            dark: '#051D36',
+                            light: '#1F4E79',
+                            bg: '#F8FAFC'
+                        },
+                        coared: {
+                            DEFAULT: '#E31E24', // Brand Logo Red
+                            hover: '#C21419',
+                            light: '#FEE2E2'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #FFFFFF;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-b: 1px solid rgba(241, 245, 249, 0.8);
+        }
+        .hover-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+            border-color: rgba(10, 51, 86, 0.2);
+        }
+        .drawer-shadow {
+            box-shadow: -10px 0 30px -5px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="text-slate-700 overflow-x-hidden antialiased selection:bg-coanavy selection:text-white">
+
+    <!-- FLOATING LIGHT NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-header shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpg" alt="COA Learning Logo" class="h-12 w-auto md:h-14">
+            </div>
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-bold text-slate-600">
+                <a href="#courses" class="hover:text-coanavy transition-colors">الدورات والبرامج</a>
+                <a href="#course-finder" class="hover:text-coanavy transition-colors">مكتشف المسار</a>
+                <a href="#register" class="hover:text-coanavy transition-colors">تسجيل الاهتمام</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/201013907174" target="_blank" class="text-slate-500 hover:text-green-500 text-xl transition-colors hidden sm:block"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#register" class="bg-coanavy hover:bg-coanavy-dark text-white text-xs font-black px-6 py-3.5 rounded-xl transition-all duration-300 shadow-md">حجز دبلومة</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-44 pb-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+        <div class="absolute w-[600px] h-[600px] bg-blue-50 rounded-full blur-[120px] top-10 right-10 pointer-events-none opacity-50"></div>
+        <div class="absolute w-[400px] h-[400px] bg-red-50 rounded-full blur-[100px] bottom-10 left-10 pointer-events-none opacity-40"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 text-center space-y-8 relative z-10 hero-section">
+            <span class="inline-flex items-center gap-2 bg-coanavy/5 border border-coanavy/10 text-coanavy text-xs font-bold px-4 py-2 rounded-full">
+                <i class="fa-solid fa-graduation-cap text-coared"></i> دبلومات عملية وتدريب تطبيقي على أنظمة ERP
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight max-w-4xl mx-auto">
+                احترف الممارسة المحاسبية الفعلية مع <span class="text-coanavy">COA Learning</span>
+            </h1>
+            <p class="text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                برامجنا مصممة لتأهيلك مباشرة لسوق العمل الإقليمي والمحلي من خلال تدريب تطبيقي على مستندات واقعية، وتهيئة متكاملة لنظام Odoo ERP.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#courses" class="bg-coanavy hover:bg-coanavy-dark text-white font-bold px-8 py-4.5 rounded-xl shadow-lg shadow-coanavy/20 transition-all duration-300 flex items-center gap-3">
+                    تصفح الدبلومات المتاحة <i class="fa-solid fa-arrow-down text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSE FINDER QUIZ -->
+    <section id="course-finder" class="py-32 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-coared text-sm font-black uppercase tracking-widest">مستشارك الأكاديمي</span>
+                <h2 class="text-3xl font-black text-slate-900">ابحث عن مسارك التدريبي المثالي في 30 ثانية</h2>
+                <div class="w-16 h-1 bg-coared mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-3xl border border-slate-200/60 shadow-xl relative overflow-hidden">
+                
+                <!-- Step 1 -->
+                <div id="quiz-step-1" class="space-y-6">
+                    <h3 class="text-xl font-bold text-slate-800">1. ما هو مستواك المهني الحالي في مجال المحاسبة؟</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <button class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-xl p-5 text-right font-bold text-slate-700 hover:text-coanavy transition-all flex flex-col justify-between min-h-[120px]" onclick="nextQuizStep(2, 'fresh')">
+                            <i class="fa-solid fa-graduation-cap text-2xl text-coared mb-4"></i>
+                            <span>خريج جديد أو طالب جامعي</span>
+                        </button>
+                        <button class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-xl p-5 text-right font-bold text-slate-700 hover:text-coanavy transition-all flex flex-col justify-between min-h-[120px]" onclick="nextQuizStep(2, 'junior')">
+                            <i class="fa-solid fa-user-tie text-2xl text-coared mb-4"></i>
+                            <span>محاسب مبتدئ (1-3 سنوات)</span>
+                        </button>
+                        <button class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-xl p-5 text-right font-bold text-slate-700 hover:text-coanavy transition-all flex flex-col justify-between min-h-[120px]" onclick="nextQuizStep(2, 'senior')">
+                            <i class="fa-solid fa-users-gear text-2xl text-coared mb-4"></i>
+                            <span>رئيس حسابات أو صاحب عمل</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div id="quiz-step-2" class="hidden space-y-6">
+                    <h3 class="text-xl font-bold text-slate-800">2. ما هو الهدف الأساسي الذي تسعى لتحقيقه الآن؟</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-xl p-5 text-right font-bold text-slate-700 hover:text-coanavy transition-all flex flex-col justify-between min-h-[120px]" onclick="submitQuiz('erp')">
+                            <i class="fa-solid fa-laptop-code text-2xl text-coanavy mb-4"></i>
+                            <span>تعلم أنظمة ERP وإدارة قواعد البيانات للمؤسسات</span>
+                        </button>
+                        <button class="bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-xl p-5 text-right font-bold text-slate-700 hover:text-coanavy transition-all flex flex-col justify-between min-h-[120px]" onclick="submitQuiz('tax')">
+                            <i class="fa-solid fa-scale-balanced text-2xl text-coanavy mb-4"></i>
+                            <span>احتراف القوانين الضريبية والامتثال المالي للشركات</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Result -->
+                <div id="quiz-result" class="hidden text-center space-y-6">
+                    <span class="text-xs font-bold text-coared uppercase tracking-widest block"><i class="fa-solid fa-circle-check"></i> تم ترشيح الدورة المناسبة لك</span>
+                    <h3 class="text-2xl font-black text-slate-900" id="recommended-course-title">اسم الدبلومة المقترحة</h3>
+                    <p class="text-slate-500 text-sm max-w-md mx-auto" id="recommended-course-desc">هذه الدورة ستختصر عليك سنوات من المحاولة والخطأ وتؤهلك لسوق العمل الإقليمي والمحلي مباشرة.</p>
+                    <div class="flex justify-center gap-4">
+                        <button class="bg-coanavy hover:bg-coanavy-dark text-white font-bold px-6 py-3 rounded-xl transition-all" id="quiz-enroll-btn">سجل وحمل المنهج الآن</button>
+                        <button class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-6 py-3 rounded-xl transition-all" onclick="resetQuiz()">إعادة الاختبار</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSE CATALOG -->
+    <section id="courses" class="py-32 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center space-y-4 mb-20">
+                <span class="text-coanavy text-sm font-black uppercase tracking-widest">المناهج والبرامج الأكاديمية</span>
+                <h2 class="text-3xl md:text-5xl font-black text-slate-900">دبلومات محاسبية عملية وتدريب Odoo</h2>
+                <div class="w-24 h-1 bg-coared mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Course 1 (Tax Live 27-7) -->
+                <div class="bg-white border border-slate-100 hover-card rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=400" alt="Tax Accounting" class="w-full h-full object-cover">
+                            <span class="absolute top-4 right-4 bg-coared text-white text-xs font-bold px-3 py-1.5 rounded-full font-cairo">دفعة جديدة لايف - تبدأ 27-7 🔴</span>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-2xl font-bold text-slate-900">TAX Accounting - دبلومة الضرائب (دفعة 27 يوليو)</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">الرواند الجديد هيبدأ يوم 27 يوليو لايف - محاضرات تفاعلية وتطبيق عملي خطوة بخطوة على المنظومة الإلكترونية للضرائب والفحص الضريبي وكسب العمل.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 space-y-3 mt-6 border-t border-slate-100 pt-6">
+                        <button class="w-full bg-coanavy hover:bg-coanavy-dark text-white font-bold py-4 rounded-xl transition-all" onclick="enrollCourse('TAX Accounting Live')">حجز مقعد بالدفعة اللايف</button>
+                        <button class="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold py-4 rounded-xl transition-all" onclick="showSyllabusDrawer('TAX Accounting - دفعة 27 يوليو لايف', ['محاسبة ضريبة القيمة المضافة والتسويات بالكامل', 'حساب وإعداد الإقرارات الضريبية السنوية للشركات والأفراد', 'كسب العمل، كشف المرتبات والتأمينات الاجتماعية وقوانين العمل', 'خطوات الفحص الضريبي وكيفية إعداد مستندات الدفاع والتمثيل'])">تصفح منهج الدورة 📖</button>
+                    </div>
+                </div>
+
+                <!-- Course 2 (Odoo Recorded) -->
+                <div class="bg-white border border-slate-100 hover-card rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400" alt="Odoo Consultant" class="w-full h-full object-cover">
+                            <span class="absolute top-4 right-4 bg-coanavy-light text-white text-xs font-bold px-3 py-1.5 rounded-full font-cairo">دورة مسجلة بالكامل 🎥</span>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Odoo ERP Consultant - مسجل</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">دبلومة مستشار أودو ERP مسجلة بالكامل مع دعم فني وتطبيقات عملية متكاملة لتهيئة النظام وتخطيط موارد المؤسسات وإدارة الحسابات والمخازن.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 space-y-3 mt-6 border-t border-slate-100 pt-6">
+                        <button class="w-full bg-coanavy hover:bg-coanavy-dark text-white font-bold py-4 rounded-xl transition-all" onclick="enrollCourse('Odoo ERP Consultant - مسجل')">سجل وابدأ المذاكرة فوراً</button>
+                        <button class="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold py-4 rounded-xl transition-all" onclick="showSyllabusDrawer('Odoo ERP Consultant - مسجل', ['تصميم وهيكلة دليل الحسابات (Chart of Accounts) على Odoo', 'تهيئة موديولات المبيعات، المشتريات، المخازن وسلاسل التوريد بالكامل', 'ربط منظومة الفاتورة والايصال الالكتروني وكاميرات الكاشير ومراكز البيع', 'التعديلات البرمجية وتصميم التقارير المحاسبية المخصصة للمؤسسات'])">تصفح منهج الدورة 📖</button>
+                    </div>
+                </div>
+
+                <!-- Course 3 (Accounting Recorded) -->
+                <div class="bg-white border border-slate-100 hover-card rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="h-52 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=400" alt="Financial Accounting" class="w-full h-full object-cover">
+                            <span class="absolute top-4 right-4 bg-coanavy-light text-white text-xs font-bold px-3 py-1.5 rounded-full font-cairo">دورة مسجلة بالكامل 🎥</span>
+                        </div>
+                        <div class="p-8 space-y-4">
+                            <h3 class="text-2xl font-bold text-slate-900">Recorded Financial Accounting - المحاسبة المالية المسجلة</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">افهم وأتقن أساسيات وقواعد المحاسبة المالية والدورة الدفترية وإعداد القوائم المالية مسجلة بالكامل لتبدأ مسارك المهني فوراً.</p>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 space-y-3 mt-6 border-t border-slate-100 pt-6">
+                        <button class="w-full bg-coanavy hover:bg-coanavy-dark text-white font-bold py-4 rounded-xl transition-all" onclick="enrollCourse('Recorded Financial Accounting')">سجل وابدأ المذاكرة فوراً</button>
+                        <button class="w-full bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold py-4 rounded-xl transition-all" onclick="showSyllabusDrawer('Recorded Financial Accounting', ['أساسيات الدورة المحاسبية والقيد المزدوج ومطابقة الدفاتر', 'تصميم الحسابات وإثبات المعاملات اليومية ودفتر الأستاذ والميزان', 'إعداد الميزانيات العمومية وقائمة الدخل والتدفقات النقدية بدقة', 'تطبيقات عملية على حالات ومستندات حقيقية من واقع مكاتب الاستشارات'])">تصفح منهج الدورة 📖</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM OFF-CANVAS CURRICULUM DRAWER -->
+    <div id="syllabusDrawer" class="fixed inset-0 z-50 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 flex justify-end">
+        <div class="w-full max-w-md bg-white h-full p-8 overflow-y-auto translate-x-full transition-transform duration-300 flex flex-col justify-between drawer-shadow" id="drawerContent">
+            <div class="space-y-8">
+                <div class="flex justify-between items-center border-b border-slate-100 pb-4">
+                    <h3 class="text-xl font-black text-slate-900" id="drawerTitle">منهج الدورة التدريبية</h3>
+                    <button class="text-slate-400 hover:text-slate-800 text-xl" onclick="closeDrawer()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="text-xs text-coared font-bold uppercase tracking-widest"><i class="fa-solid fa-list-check"></i> الوحدات والأسابيع الدراسية بالتفصيل:</h4>
+                    <ul class="space-y-4 text-sm text-slate-600 font-semibold" id="drawerList">
+                        <!-- Dynamic items -->
+                    </ul>
+                </div>
+            </div>
+            
+            <button class="w-full bg-coanavy hover:bg-coanavy-dark text-white font-bold py-4 rounded-xl transition-all mt-8" onclick="closeDrawer()">حسناً، إغلاق</button>
+        </div>
+    </div>
+
+    <!-- REGISTRATION SECTION -->
+    <section id="register" class="py-32 bg-slate-50 relative border-t border-slate-200/50">
+        <div class="max-w-2xl mx-auto px-6">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100">
+                <div class="text-center space-y-4 mb-10">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900">سجل طلب التحاق بالدبلومة</h2>
+                    <p class="text-slate-500 text-sm">سيقوم المنسق الدراسي بالتواصل معك هاتفياً ومراسلتك على الواتساب لتحديد موعد اختبار القبول وتأكيد الحجز.</p>
+                </div>
+
+                <form id="courseEnrollForm" class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-500 block">الاسم بالكامل *</label>
+                        <input type="text" id="studentName" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 text-slate-800 focus:outline-none focus:border-coanavy focus:ring-4 focus:ring-coanavy/5 transition-all" placeholder="أ. أحمد السعيد">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-500 block">رقم الواتساب النشط *</label>
+                        <input type="tel" id="studentPhone" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 text-slate-800 focus:outline-none focus:border-coanavy focus:ring-4 focus:ring-coanavy/5 transition-all text-right font-outfit" placeholder="009665xxxxxxxx">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-500 block">الدورة التدريبية المطلوبة *</label>
+                        <select id="studentCourse" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 text-slate-800 focus:outline-none focus:border-coanavy focus:ring-4 focus:ring-coanavy/5 transition-all">
+                            <option value="" disabled selected>اختر الدبلومة التي ترغب بالالتحاق بها...</option>
+                            <option value="TAX Accounting - دفعة 27 يوليو لايف">TAX Accounting - دبلومة الضرائب (دفعة 27 يوليو لايف)</option>
+                            <option value="Odoo ERP Consultant - مسجل">Odoo ERP Consultant - مسجل</option>
+                            <option value="Recorded Financial Accounting">Recorded Financial Accounting - المحاسبة المالية المسجلة</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-500 block">المستوى الوظيفي الحالي</label>
+                        <select id="studentLevel" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-4 text-slate-800 focus:outline-none focus:border-coanavy focus:ring-4 focus:ring-coanavy/5 transition-all">
+                            <option value="fresh">خريج جديد (تجارة / إدارة أعمال)</option>
+                            <option value="accountant">محاسب مبتدئ (1-3 سنوات)</option>
+                            <option value="senior">رئيس حسابات أو مسؤول مالي</option>
+                            <option value="owner">صاحب عمل أو مدير تنفيذي</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-coanavy hover:bg-coanavy-dark text-white font-bold py-4 rounded-xl transition-all duration-300">تقديم طلب الالتحاق بالدورة</button>
+                </form>
+
+                <div id="enrollSuccess" class="hidden text-center space-y-6 py-12">
+                    <div class="w-20 h-20 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto border border-green-500/30">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900">تم إرسال طلبك بنجاح!</h3>
+                    <p class="text-slate-500 max-w-md mx-auto text-sm">تم استلام طلب الالتحاق بدورة (<span id="successCourseName" class="text-coanavy font-bold"></span>) بنجاح. سيقوم المنسق التعليمي بالتواصل معك قريباً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-100 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <img src="logo.jpg" alt="COA Learning Logo" class="h-10 w-auto">
+            <p>© 2026 جميع الحقوق محفوظة لشركة COA Egypt للاستشارات المالية والـ ERP.</p>
+            <div class="flex gap-4">
+                <a href="https://wa.me/201013907174" target="_blank" class="w-10 h-10 rounded-full bg-slate-50 hover:bg-coanavy hover:text-white transition-all flex items-center justify-center text-slate-500"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/COA.Egypt/" target="_blank" class="w-10 h-10 rounded-full bg-slate-50 hover:bg-coanavy hover:text-white transition-all flex items-center justify-center text-slate-500"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // GSAP entry animation
+        gsap.from(".hero-section", { duration: 1.2, y: 50, opacity: 0, ease: "power3.out" });
+
+        // Quiz state logic
+        let quizLevel = '';
+        
+        function nextQuizStep(step, val) {
+            if(step === 2) {
+                quizLevel = val;
+                document.getElementById('quiz-step-1').classList.add('hidden');
+                document.getElementById('quiz-step-2').classList.remove('hidden');
+            }
+        }
+
+        function submitQuiz(goal) {
+            document.getElementById('quiz-step-2').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+
+            const title = document.getElementById('recommended-course-title');
+            const desc = document.getElementById('recommended-course-desc');
+            const enrollBtn = document.getElementById('quiz-enroll-btn');
+
+            if(goal === 'erp') {
+                title.textContent = "Odoo ERP Consultant - مسجل";
+                desc.textContent = "هذا البرنامج مسجل بالكامل ويغطي تهيئة موديولات Odoo ERP وتخطيط الموارد للمؤسسات إدارياً وتقنياً.";
+                enrollBtn.onclick = function() { enrollCourse("Odoo ERP Consultant - مسجل"); };
+            } else {
+                title.textContent = "TAX Accounting - دبلومة الضرائب (دفعة 27 يوليو لايف)";
+                desc.textContent = "الدفعة الجديدة المباشرة لاحتراف ضريبة القيمة المضافة، كسب العمل، والفحص الضريبي، تبدأ يوم 27-7 لايف وتفاعلي.";
+                enrollBtn.onclick = function() { enrollCourse("TAX Accounting - دفعة 27 يوليو لايف"); };
+            }
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-step-1').classList.remove('hidden');
+        }
+
+        // Show Syllabus Drawer
+        function showSyllabusDrawer(courseName, items) {
+            document.getElementById('drawerTitle').textContent = `منهج كورس: ${courseName}`;
+            const list = document.getElementById('drawerList');
+            list.innerHTML = '';
+
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100';
+                li.innerHTML = `<span class="text-coared mt-0.5"><i class="fa-solid fa-circle-chevron-left"></i></span> <span>${item}</span>`;
+                list.appendChild(li);
+            });
+
+            const drawer = document.getElementById('syllabusDrawer');
+            const content = document.getElementById('drawerContent');
+            drawer.classList.remove('opacity-0', 'pointer-events-none');
+            content.classList.remove('translate-x-full');
+        }
+
+        function closeDrawer() {
+            const drawer = document.getElementById('syllabusDrawer');
+            const content = document.getElementById('drawerContent');
+            drawer.classList.add('opacity-0', 'pointer-events-none');
+            content.classList.add('translate-x-full');
+        }
+
+        function enrollCourse(courseName) {
+            const select = document.getElementById('studentCourse');
+            select.value = courseName;
+            closeDrawer();
+            document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form Submit
+        document.getElementById('courseEnrollForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const studentName = document.getElementById('studentName').value;
+            const chosenCourse = document.getElementById('studentCourse').value;
+
+            document.getElementById('successCourseName').textContent = chosenCourse;
+            document.getElementById('courseEnrollForm').classList.add('hidden');
+            document.getElementById('enrollSuccess').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
